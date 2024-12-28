@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  /* font-family: "Montserrat", serif; */
+  font-family: "Noto Sans KR", serif;
+  background-color: #efe7e3;
+}
+strong {
+  font-weight: bold;
+}
+.frame {
+  margin: 30px 150px;
+  display: flex;
+  flex-direction: column; /*아래로 쌓이는 방식*/
+}
+.navigator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #c2b4ab;
+}
+li {
+  display: inline;
+  /* align-self: center; */
+  margin-left: 10px;
+}
+.nav-menu {
+  font-family: "Montserrat", serif;
+  /* font-weight: 400; */
+  font-size: 16px;
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #c2b4ab;
+  transition: 0.3s;
+}
+/* dashboard */
+.dashboard {
+  margin-top: 70px;
+}
+.dashboard h1 {
+  font-family: "Montserrat", serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+.dashboard p {
+  font-size: 16px;
+  color: black;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.dashboard span {
+  color: #9ccb3d;
+}
+
+/* recent-menu */
+.recent-menu {
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #c2b4ab;
+  text-align: right;
+  margin-top: 70px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0;
+}
+.contact {
+  font-family: "Montserrat", serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+}
+.links a {
+  font-family: "Montserrat", serif;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.links p {
+  font-family: "Noto Sans KR", serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #c2b4ab;
+  text-align: center;
+  margin: 20px 0px;
+}
+.profile-section {
+  display: flex;
+}
+#profile-picture {
+  width: 300px;
+}
