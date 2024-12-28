@@ -49,19 +49,19 @@ a:hover {
 .dashboard {
   margin-top: 70px;
 }
-.dashboard h1 {
+h1 {
   font-family: "Montserrat", serif;
   font-size: 40px;
   font-weight: bold;
   color: black;
 }
-.dashboard p {
+p {
   font-size: 16px;
   color: black;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.dashboard span {
+span {
   color: #9ccb3d;
 }
 
@@ -105,6 +105,8 @@ footer {
   text-align: center;
   margin: 20px 0px;
 }
+
+/* INFO 페이지 작업 */
 .profile-section {
   display: flex;
 }
