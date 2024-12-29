@@ -6,54 +6,6 @@ body {
   /* font-family: "Montserrat", serif; */
   background-color: #101820;
 }
-.navigator {
-  position: fixed;
-  top: 50%;
-  right: 30px;
-  margin-top: -90px;
-}
-.navigator ul {
-  display: flex;
-  flex-direction: column;
-}
-.navigator li {
-  /* display: block;
-  width: 14px;
-  height: 13px;
-  position: relative;
-  text-align: right;
-  text-decoration: none;
-  margin: 7px; */
-}
-.navigator li a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  right: 30px;
-}
-.nav-name {
-  color: #d1d1d1;
-  text-decoration: none;
-  margin-right: 20px;
-}
-.nav-point {
-  height: 6px;
-  width: 6px;
-  border-radius: 100%;
-  background: #d1d1d1;
-  margin-top: 10px;
-}
-.nav-point:hover {
-  height: 12px;
-  width: 12px;
-}
-.nav-point:focus {
-  height: 12px;
-  width: 12px;
-}
-strong {
-  font-weight: bold;
-}
 .container {
   overflow: hidden;
   height: 100%;
@@ -63,16 +15,122 @@ strong {
 .section {
   height: 100vh;
 }
-.section-1 {
+#section-1 {
   background-color: #101820;
 }
-.section-2 {
+#section-2 {
   background-color: #d1d1d1;
 }
-.section-3 {
+#section-3 {
   background-color: #101820;
 }
-
+#section-4 {
+  background-color: #d1d1d1;
+}
+.page-1 {
+  display: flex;
+  flex-direction: column;
+}
+.logo-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+}
+.logo-wrap h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+.logo-wrap h2 {
+  color: #d1d1d1;
+  font-size: 20px;
+  font-weight: bold;
+}
+.intro-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px;
+}
+.my-image {
+  width: 400px;
+  height: 466px;
+}
+strong {
+  font-weight: bold;
+}
+.intro-wrap h1 {
+  font-family: "Montserrat", serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.intro-wrap p {
+  font-size: 16px;
+  color: #d1d1d1;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.intro-wrap span {
+  color: #fc4c02;
+}
+.my-dream {
+  font-style: italic;
+  color: #75787b;
+  font-size: 20px;
+  text-align: center;
+}
+/* 네비게이션 영역 */
+.navigator {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  right: 1%;
+  margin-top: -65px;
+}
+.navigator ul li {
+  width: 100px;
+  height: 20px;
+  margin: 10px;
+  /* border: 1px solid rgb(87, 87, 87); */
+}
+.navigator ul li a {
+  display: flex;
+  height: 20px;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  text-decoration: none;
+}
+.navigator ul li a .nav-name {
+  position: absolute;
+  margin-right: 10px;
+  color: #d1d1d1;
+  clip: rect(0, 0, 0, 0); /* 대상 숨기기 */
+  transition: 0.3s;
+}
+.navigator ul li a .nav-point {
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #d1d1d1;
+  transition: 0.3s;
+}
+.navigator ul li a:hover .nav-name {
+  clip: auto; /* clip 속성 제거 */
+  position: relative;
+  transition: 0.3s;
+}
+.navigator ul li a:hover .nav-point {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  left: 4px;
+  transition: 0.3s;
+}
 /* 
 a {
   color: black;

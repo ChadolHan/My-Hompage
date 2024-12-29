@@ -32,55 +32,96 @@
   </head>
   <body>
     <div class="container">
-      <div class="section section-1" data-anchor="page-1">page-1</div>
-      <div class="section section-2" data-anchor="page-2">page-2</div>
-      <div class="section section-3" data-anchor="page-3">page-3</div>
-    </div>
-    <!-- <div class="frame">
-      <div class="dashboard">
-        <h1><span>I</span>nterest</h1>
-        <p><strong>학습자의 흥미</strong>를 유발하는 <strong>재미있는 학습 요소</strong>가 접목된 교육 콘텐츠를 개발합니다.</h1>
-        <h1><span>I</span>mmersion</h1>
-        <p>​학습에 게임의 요소를 접목한 <strong>Gamification 콘텐츠</strong>를 전문적으로 개발하여 <strong>몰입감 있는 학습을 제공</strong>합니다.</p>
-        <h1><span>I</span>nnoivation</h1>
-        <p>다년간의 다양한 모바일 교육 앱 개발 경험을 바탕으로​ <strong>모바일에 최적화된 그래픽</strong>과 <strong>사용자 친화적인 인터페이스, 애니메이션 그리고 퍼포먼스</strong>를 구현합니다.</p>
-      </div>
-      <h5 class="recent-menu">RECENT WORKS</h5>
-      <div class="recent-works">recent-works-wrap</div>
-      <footer class="work-footer">
-        <h3 class="contact">CONTACT ME</h3>
-        <div class="links">
-          <a href="https://www.beyondisoft.com/" class="beyond">BEYONDSOFT</a>
-          <p>Feel free to contact me!</p>
+      <div class="section page-1" id="section-1">
+        <div class="logo-wrap">
+          <h1>CHADOL</h1>
+          <h2>HAN SUNGSOO</h2>
         </div>
-      </footer> -->
+        <div class="intro-wrap">
+          <img class="my-image" src="img/my_Image.png" alt="내 사진">
+          <div class="intro-info">
+            <h1><span>I</span>nterest</h1>
+            <p><strong>학습자의 흥미</strong>를 유발하는 <strong>재미있는 학습 요소</strong>가 접목된 교육 콘텐츠를 개발합니다.</h1>
+            <h1><span>I</span>mmersion</h1>
+            <p>​학습에 게임의 요소를 접목한 <strong>Gamification 콘텐츠</strong>를 전문적으로 개발하여 <strong>몰입감 있는 학습을 제공</strong>합니다.</p>
+            <h1><span>I</span>nnoivation</h1>
+            <p>다년간의 다양한 모바일 교육 앱 개발 경험을 바탕으로​ <strong>모바일에 최적화된 그래픽</strong>과 <strong>사용자 친화적인 인터페이스, 애니메이션 그리고 퍼포먼스</strong>를 구현합니다.</p>
+          </div>
+        </div>
+        <div class="my-dream">
+          <h1>"기획, 디자인, 개발... 다하는 1인 개발자를 꿈꾸며..."</h1>
+        </div>
+      </div>
+      <div class="section page-2" id="section-2">
+        <div class="frame">
+          <h1>ABOUT ME</h1>
+          <div class="recent-works">recent-works-wrap</div>
+        </div>
+      </div>
+      <div class="section page-3" id="section-3">page-3</div>
+      <div class="section page-4" id="section-4">
+        <div class="work-footer">
+          <h3 class="contact">CONTACT ME</h3>
+          <div class="links">
+            <a href="https://www.beyondisoft.com/" class="beyond">BEYONDSOFT</a>
+            <p>Feel free to contact me!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 우측 중앙 네비게이션션 -->
     <div class="navigator">
       <ul>
         <li>
-          <a href="#page-1">
-            <!-- <span class="nav-name">Intro</span> -->
+          <a href="#section-1">
+            <span class="nav-name">Intro</span>
             <span class="nav-point"></span>
           </a>
         </li>
         <li>
-          <a href="#page-1">
-            <!-- <span class="nav-name">About</span> -->
+          <a href="#section-2">
+            <span class="nav-name">About</span>
             <span class="nav-point"></span>
           </a>
         </li>
         <li>
-          <a href="#page-1">
-            <!-- <span class="nav-name">Portfolio</span> -->
+          <a href="#section-3">
+            <span class="nav-name">Portfolio</span>
             <span class="nav-point"></span>
           </a>
         </li>
         <li>
-          <a href="#page-1">
-            <!-- <span class="nav-name">Contact</span> -->
+          <a href="#section-4">
+            <span class="nav-name">Contact</span>
             <span class="nav-point"></span>
           </a>
         </li>
       </ul>
     </div>
+
+    <!-- 마우스 중간 휠 1번당 화면 높이 간격으로 이동하기기 -->
+    <script>
+      let currentSection = 0; // 현재 섹션 인덱스
+      const sections = document.querySelectorAll('.section');
+
+      window.addEventListener('wheel', (event) => {
+        event.preventDefault(); // 기본 휠 동작 방지
+
+        const direction = event.deltaY > 0 ? 1 : -1; // 휠 방향
+        const nextSection = currentSection + direction;
+
+        // 다음 섹션이 유효한지 확인
+        if (nextSection >= 0 && nextSection < sections.length) {
+          currentSection = nextSection;
+          const scrollTo = sections[currentSection].offsetTop;
+
+          window.scrollTo({
+            top: scrollTo,
+            behavior: 'smooth' // 부드러운 스크롤
+          });
+        }
+      }, { passive: false }); // passive: false로 기본 스크롤 방지 가능
+    </script>
   </body>
 </html>
