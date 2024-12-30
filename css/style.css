@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .section {
   height: 100vh;
 }
@@ -27,6 +28,8 @@ body {
 #section-4 {
   background-color: #d1d1d1;
 }
+
+/* page-1 */
 .page-1 {
   display: flex;
   flex-direction: column;
@@ -37,52 +40,102 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 50px;
+  margin-bottom: 10px;
 }
 .logo-wrap h1 {
-  color: #fff;
-  font-size: 40px;
+  color: #d1d1d1;
+  font-size: 48px;
   font-weight: bold;
+}
+.my-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.my-character {
+  width: 80px;
 }
 .logo-wrap h2 {
   color: #d1d1d1;
   font-size: 20px;
   font-weight: bold;
+  margin-right: 20px;
 }
+
 .intro-wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 50px;
+  margin: 0 50px;
 }
 .my-image {
-  width: 400px;
-  height: 466px;
+  width: 600px;
+  height: 700px;
+  margin-right: 50px;
 }
 strong {
   font-weight: bold;
 }
-.intro-wrap h1 {
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.intro-info h1 {
   font-family: "Montserrat", serif;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 5px;
 }
-.intro-wrap p {
-  font-size: 16px;
+.intro-info p {
+  font-size: 24px;
   color: #d1d1d1;
   line-height: 1.5;
   margin-bottom: 30px;
 }
-.intro-wrap span {
+.intro-info span {
   color: #fc4c02;
 }
 .my-dream {
   font-style: italic;
   color: #75787b;
-  font-size: 20px;
+  font-size: 36px;
   text-align: center;
 }
+
+/* page - 2 */
+.page-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-title h1 {
+  color: #101820;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.about-info {
+  display: flex;
+  flex-direction: row;
+}
+.about-info img {
+  width: 600px;
+}
+.about-list {
+  width: 600px;
+  text-align: end;
+  margin-right: 50px;
+}
+.about-list li {
+  font-size: 24px;
+  color: #101820;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
 /* 네비게이션 영역 */
 .navigator {
   position: fixed;
